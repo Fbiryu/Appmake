@@ -1,0 +1,7 @@
+{
+  "name": "ここいる Presence",
+  "short_name": "ここいる",
+  "display": "standalone",
+  "start_url": "./",
+  "icons": []
+}
