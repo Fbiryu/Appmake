@@ -24,7 +24,8 @@ document.getElementById('room-name').textContent=`room: ${roomId}`;
 let token=localStorage.getItem('anonToken');
 if(!token){token=crypto.randomUUID();localStorage.setItem('anonToken',token);}
 
-const ws=new WebSocket('ws://localhost:8080');
+const wsUrl = (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host;
+const ws = new WebSocket(wsUrl);
 ws.addEventListener('open',()=>{
   send({type:'join',room:roomId,token,vibe:currentVibe});
   heartbeat();
