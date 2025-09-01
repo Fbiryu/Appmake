@@ -1,57 +1,23 @@
-html, body {
-  margin: 0;
-  height: 100%;
-  background: #111;
-  color: #fff;
-  font-family: sans-serif;
+html,body{
+  margin:0;height:100%;background:#111;color:#fff;font-family:sans-serif;
 }
-#topbar {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 10px;
-  z-index: 2;
+#topbar{
+  position:fixed;top:0;left:0;right:0;height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;z-index:2;
 }
-#presence-canvas {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111;
+#canvas{
+  position:absolute;top:0;left:0;width:100%;height:100%;background:#111;
 }
-#status {
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-  z-index: 2;
+#status{
+  position:fixed;top:50px;width:100%;text-align:center;font-size:18px;z-index:2;
 }
-#vibe-picker {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 15px;
-  z-index: 2;
+#vibes{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:15px;z-index:2;
 }
-.vibe {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
+.vibe{
+  width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;opacity:.8;
 }
-.vibe.calm { background: #6ba4ff; }
-.vibe.sunny { background: #ffe66b; }
-.vibe.deep { background: #b36bff; }
-.vibe.free { background: #6bffb3; }
-.vibe.selected {
-  outline: 3px solid #fff;
-  opacity: 1;
-}
+.vibe.selected{outline:3px solid #fff;opacity:1;}
+.vibe[data-vibe="calm"]{background:#6ba4ff;}
+.vibe[data-vibe="sunny"]{background:#ffe66b;}
+.vibe[data-vibe="deep"]{background:#b36bff;}
+.vibe[data-vibe="free"]{background:#6bffb3;}

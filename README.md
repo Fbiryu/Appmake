@@ -1,14 +1,13 @@
 # Presence App
 
-Minimal demo of the "ここいる" presence-sharing concept.
+Minimal prototype of the "ここいる" concept. Users visiting the same URL share their presence as floating dots.
 
-## Usage
+## Run
+```
+node server.js
+```
+Open `http://localhost:8080/` (or any custom path for a room like `/campus-2025`).
 
-1. Start the server:
-   ```bash
-   node server.js
-   ```
-2. Visit `http://localhost:8080/` in one or more browser windows. To create a custom room, append any path such as `http://localhost:8080/campus-2025` and share that URL.
-3. Select a color at the bottom to change your vibe. Dots for other visitors fade in as they join.
+Pick a vibe color at the bottom. Dots of others will fade in. Status text hides exact numbers when fewer than three people are present.
 
-The interface is PWA-ready and works offline after first load.
+The service worker caches assets so the last state can show a quiet waiting room while offline.
